@@ -9,7 +9,7 @@ import { Country } from './country-list.inferfaces';
 })
 export class CountryListService {
 
-  COVID_API_ULR = environment.COVID_API_ULR
+  COVID_API_ULR = environment.COVID_API_URL
 
   constructor( private http: HttpClient ) { }
 

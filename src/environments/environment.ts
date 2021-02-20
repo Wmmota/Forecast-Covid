@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  COVID_API_ULR: 'https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true'
+  COVID_API_URL: 'https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true',
+  LOGIN_API_URL: 'teste/teste.com.br'
 };
 
 
