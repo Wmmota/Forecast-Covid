@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { take } from 'rxjs/operators';
+import { finalize, take } from 'rxjs/operators';
 
 import { Country } from './country-list.inferfaces';
 import { CountryListService } from './country-list.service';
@@ -35,7 +35,8 @@ export class CountryListComponent implements OnInit {
 
     this.countryListService.getCountryList()
     .pipe(
-      take(1)
+      take(1),
+      finalize( () => this.isLoading = false )
     ).subscribe(
         response => { this.onSuccess(response) },
         error => { this.onError(error) }
@@ -43,13 +44,11 @@ export class CountryListComponent implements OnInit {
   }
 
   onSuccess(response: Country[]) {
-      this.isLoading = false;
       this.isError = false;
       this.countryList = response;
   }
 
   onError(error: any) {
-      this.isLoading = false;
       this.isError = true;
       console.log(error);
   }
