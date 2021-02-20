@@ -19,7 +19,7 @@ export class AuthService {
       return this.token;
     }
     
-    const loggedUser = localStorage.getItem.('token');
+    const loggedUser = localStorage.getItem('token');
     if (loggedUser) {
       this.token = JSON.parse(loggedUser);
       return this.token;

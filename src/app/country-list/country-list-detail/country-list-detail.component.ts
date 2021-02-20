@@ -44,8 +44,8 @@ export class CountryListDetailComponent implements OnInit {
       take(1),
       finalize( () => this.isLoading = false )
     ).subscribe(
-        response => { this.onSuccess(response) },
-        error => { this.onError(error) }
+        (response) => { this.onSuccess(response) },
+        (error) => { this.onError(error) }
       )
   }
 
