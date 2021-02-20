@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { CountryListDetailComponent } from './country-list/country-list-detail/country-list-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { LoginComponent } from './login/login.component';
 
@@ -14,6 +15,12 @@ const routes: Routes = [
     component: LoginComponent}, {
     path: 'home',
     component: CountryListComponent,
+  }, {
+    path: 'home/:country',
+    component: CountryListDetailComponent
+  }, {
+    path: '**',
+    component: CountryListComponent
   }
 ];
 

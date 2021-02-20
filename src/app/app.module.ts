@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CountryListDetailComponent } from './country-list/country-list-detail/country-list-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -18,7 +19,8 @@ registerLocaleData(localePt, 'pt');
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    CountryListComponent
+    CountryListComponent,
+    CountryListDetailComponent
   ],
   imports: [
     BrowserModule,

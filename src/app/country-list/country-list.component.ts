@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { take } from 'rxjs/operators';
 
 import { Country } from './country-list.inferfaces';
@@ -17,7 +18,10 @@ export class CountryListComponent implements OnInit {
 
 
 
-  constructor(private countryListService: CountryListService) { }
+  constructor(
+    private countryListService: CountryListService,
+    private router: Router, 
+    ) { }
 
   ngOnInit(): void {
     this.loadList()
@@ -41,7 +45,6 @@ export class CountryListComponent implements OnInit {
   onSuccess(response: Country[]) {
       this.isLoading = false;
       this.isError = false;
-      console.log(response)
       this.countryList = response;
   }
 
@@ -50,4 +53,10 @@ export class CountryListComponent implements OnInit {
       this.isError = true;
       console.log(error);
   }
+
+  onCountryListDetails(country: Country) {
+    this.router.navigate(['home/' + country.country]) 
+  }
 }
+
+
