@@ -17,7 +17,7 @@
     <div class="card-body" *ngIf="!isLoading && !isError">
       <h5 class="card-title"> {{ country.country }} </h5>
         <p class="card-text" > Infectados: {{ country.infected | number:'1.0-0'}}</p>
-        <p class="card-text" > Testados: {{ country.tested |number:'1.0-0' }}</p>
+        <p class="card-text" > Testados: {{ country.tested | number:'1.0-0' }}</p>
         <p class="card-text" > Recuperados: {{ country.recovered | number:'1.0-0'}}</p>
         <p class="card-text" > Fatalidades: {{ country.deceased | number:'1.0-0'}}</p>
         

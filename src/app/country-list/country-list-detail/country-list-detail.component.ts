@@ -63,10 +63,18 @@ export class CountryListDetailComponent implements OnInit {
       console.log(error);
   }
 
+
   checkCountryList(countryList: Country[]) {
     for (let country of countryList) {
       if (country.country === this.countryName) {
-        this.country = country
+        this.country = country;
+        
+        this.country.country = country.country
+        this.country.infected = !isNaN(country.infected) ? country.infected : 0;
+        this.country.tested = !isNaN(country.tested) ? country.tested : 0;
+        this.country.recovered = !isNaN(country.recovered) ? country.recovered : 0;
+        this.country.deceased = !isNaN(country.deceased) ? country.deceased : 0;
+
       }
       
     }

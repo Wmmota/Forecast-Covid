@@ -1,6 +1,6 @@
 export interface Country {
     infected: number,
-    tested: string,
+    tested: number,
     recovered: number,
     deceased: number,
     country: string,
