@@ -10,6 +10,7 @@ import { CountryListDetailComponent } from './country-list/country-list-detail/c
 import { CountryListComponent } from './country-list/country-list.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -20,7 +21,8 @@ registerLocaleData(localePt, 'pt');
     HeaderComponent,
     LoginComponent,
     CountryListComponent,
-    CountryListDetailComponent
+    CountryListDetailComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
