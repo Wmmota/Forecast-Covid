@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CountryListDetailComponent } from './country-list/country-list-detail/country-list-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
-import { LoginComponent } from './login/login.component';
+import { ForecastComponent } from './forecast/forecast.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -12,8 +12,8 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   } ,  { 
-    path: 'login',
-    component: LoginComponent}, {
+    path: 'forecast',
+    component: ForecastComponent}, {
     path: 'home',
     component: CountryListComponent,
   }, {

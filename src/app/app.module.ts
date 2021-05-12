@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountryListDetailComponent } from './country-list/country-list-detail/country-list-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
-import { LoginComponent } from './login/login.component';
+import { ForecastComponent } from './forecast/forecast.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -21,7 +21,7 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
+    ForecastComponent,
     CountryListComponent,
     CountryListDetailComponent,
     PageNotFoundComponent,
